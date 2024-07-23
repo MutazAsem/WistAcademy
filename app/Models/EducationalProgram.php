@@ -13,7 +13,7 @@ class EducationalProgram extends Model
     use HasFactory,SoftDeletes;
 
     protected $fillable = [
-        'subject_id','category_id','trainer_id','description','start_time','end_time',
+        'name','subject_id','category_id','trainer_id','description','price','start_time','end_time',
         'start_date','end_date','hours','available','status',
     ];
 
@@ -33,6 +33,6 @@ class EducationalProgram extends Model
 
     public function trainer ():BelongsTo
     {
-        return $this->belongsTo(Category::class,'trainer_id');
+        return $this->belongsTo(User::class,'trainer_id');
     }
 }
