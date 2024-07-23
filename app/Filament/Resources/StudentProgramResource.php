@@ -7,6 +7,7 @@ use App\Enums\StudentStatusEnum;
 use App\Filament\Resources\StudentProgramResource\Pages;
 use App\Filament\Resources\StudentProgramResource\RelationManagers;
 use App\Models\StudentProgram;
+use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -30,7 +31,9 @@ class StudentProgramResource extends Resource
                         Forms\Components\Section::make()
                             ->schema([
                                 Forms\Components\Select::make('student_id')
-                                    ->relationship('student', 'name')
+                                    ->options(User::whereHas('roles', function ($query) {
+                                        $query->where('name', 'panel_user');
+                                    })->pluck('name', 'id'))
                                     ->native(false)
                                     ->label('Student Name')
                                     ->required()
@@ -82,7 +85,9 @@ class StudentProgramResource extends Resource
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('Student Name')
-                    ->relationship('student', 'name'),
+                ->options(User::whereHas('roles', function ($query) {
+                    $query->where('name', 'panel_user');
+                })->pluck('name', 'id')),
                 Tables\Filters\SelectFilter::make('Program Name')
                     ->relationship('educationalProgram', 'name'),
             ])

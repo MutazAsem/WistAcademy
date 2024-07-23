@@ -7,9 +7,12 @@ use App\Models\StudentProgram;
 use App\Models\Subject;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
+use BezhanSalleh\FilamentShield\Traits\HasWidgetShield;
 
 class StatsOverview extends BaseWidget
 {
+    use HasWidgetShield;
+    
     protected function getStats(): array
     {
         return [
