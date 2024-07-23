@@ -30,6 +30,6 @@ class StudentProgram extends Model
 
     public function educationalProgram ():BelongsTo
     {
-        return $this->belongsTo(educationalProgram::class,'program_id');
+        return $this->belongsTo(EducationalProgram::class,'program_id');
     }
 }

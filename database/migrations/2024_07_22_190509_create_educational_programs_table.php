@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::disableForeignKeyConstraints();
         Schema::create('educational_programs', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->unsignedBigInteger('subject_id');
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('trainer_id');
             $table->text('description');
+            $table->integer('price')->default(0);
             $table->time('start_time')->nullable();
             $table->time('end_time')->nullable();
             $table->date('start_date')->nullable();
