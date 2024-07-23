@@ -6,6 +6,7 @@ use App\Enums\ProgramStatusEnum;
 use App\Filament\Resources\EducationalProgramResource\Pages;
 use App\Filament\Resources\EducationalProgramResource\RelationManagers;
 use App\Models\EducationalProgram;
+use App\Models\User;
 use Carbon\Carbon;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -47,7 +48,9 @@ class EducationalProgramResource extends Resource
                                 ->required()
                                 ->markAsRequired(false),
                             Forms\Components\Select::make('trainer_id')
-                                ->relationship('trainer', 'name')
+                                ->options(User::whereHas('roles', function ($query) {
+                                    $query->where('name', 'trainer');
+                                })->pluck('name', 'id'))
                                 ->native(false)
                                 ->required()
                                 ->markAsRequired(false),
@@ -174,7 +177,9 @@ class EducationalProgramResource extends Resource
                 Tables\Filters\SelectFilter::make('Category')
                     ->relationship('category', 'name'),
                 Tables\Filters\SelectFilter::make('Trainer')
-                    ->relationship('trainer', 'name'),
+                    ->options(User::whereHas('roles', function ($query) {
+                        $query->where('name', 'trainer');
+                    })->pluck('name', 'id')),
             ])
             ->actions([
                 Tables\Actions\ActionGroup::make([

@@ -29,13 +29,13 @@ class AdminPanelProvider extends PanelProvider
             ->id('wistDashboard')
             ->path('wistDashboard')
             // ->login()
-            ->favicon( asset('admin/logo/logo.png') )
+            ->favicon(asset('admin/logo/logo.png'))
             ->sidebarCollapsibleOnDesktop()
             ->userMenuItems([
                 MenuItem::make()
-                ->label('Profile')
-                ->url('/user/profile')
-                ->icon('heroicon-o-user')
+                    ->label('Profile')
+                    ->url('/user/profile')
+                    ->icon('heroicon-o-user')
             ])
             ->colors([
                 'primary' => Color::Blue,
@@ -46,9 +46,7 @@ class AdminPanelProvider extends PanelProvider
                 Pages\Dashboard::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
-            ->widgets([
-
-            ])
+            ->widgets([])
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
@@ -63,6 +61,10 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            
+            ->plugins([
+                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
             ]);
     }
 }

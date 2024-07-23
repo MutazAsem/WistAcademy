@@ -54,6 +54,7 @@ class UserResource extends Resource
                                 Forms\Components\Select::make('gender')
                                     ->required()
                                     ->markAsRequired(false)
+                                    ->native(false)
                                     ->options(['Male' => 'Male', 'Female' => 'Female']),
                                 Forms\Components\TextInput::make('password_confirmation')
                                     ->password()
@@ -72,13 +73,14 @@ class UserResource extends Resource
                                     ->step(9)
                                     ->tel()
                                     ->prefix('+967'),
-                                // Forms\Components\Select::make('roles')
-                                //     ->relationship('roles', 'name')
-                                //     ->multiple()
-                                //     ->preload()
-                                //     ->required()
-                                //     ->markAsRequired(false)
-                                //     ->searchable(),
+                                Forms\Components\Select::make('roles')
+                                    ->relationship('roles', 'name')
+                                    ->multiple()
+                                    ->native(false)
+                                    ->preload()
+                                    ->required()
+                                    ->markAsRequired(false)
+                                    ->searchable(),
                                 Forms\Components\Toggle::make('status')
                                     ->default(true),
                             ])->columns(2)
@@ -122,8 +124,8 @@ class UserResource extends Resource
                     ->sortable(),
             ])
             ->filters([
-                // Tables\Filters\SelectFilter::make('Role Name')
-                //     ->relationship('roles', 'name'),
+                Tables\Filters\SelectFilter::make('Role Name')
+                    ->relationship('roles', 'name'),
             ])
             ->actions([
                 Tables\Actions\ActionGroup::make([
