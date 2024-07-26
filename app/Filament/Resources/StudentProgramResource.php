@@ -22,6 +22,15 @@ class StudentProgramResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-plus';
 
+    protected static ?string $recordTitleAttribute = 'id';
+
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['student.name'];
+    }
+
+    protected static int $globalSearchResultsLimit = 5;
+
     public static function form(Form $form): Form
     {
         return $form
