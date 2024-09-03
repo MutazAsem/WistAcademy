@@ -1,66 +1,161 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+تم انشاء هذا المشروع لأكاديمية ويست
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## في هذه المهمة تم انجاز التالي بالترتيب:
+1- قمنا بتصميم وترتيب قاعدة البيانات (الجداول والعلاقات).
 
-## About Laravel
+2- قمنا بانشاء مشروع لارافيل جديد.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+3- استخدام مكتبة Jetstream من اجل عمليات انشاءحساب و تسجيل الدخول و التحقق من Email
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+4- قمنا باستخدام مكتبة filament مع لارافيل للوحة التحكم والتحكم بالصلاحيات.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+5- قمنا بالتعديل على جدول المستخدمين والتصميم الافتراضي.
 
-## Learning Laravel
+6- قمنا باضافة controller لتعديل الملف الشخصي للمستخدم مع الواجهة الخاصة بالمستخدم للتعديل.
+ 
+7- قمنا بإسقاط الجداول والعلاقات بالمشروع.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+8- قمنا بإضافة العمليات في النظام مع الجداول كاملة.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+9- قمنا بعرض الاحصائيات ومخططات المراقبة.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+10- قمنا باضافة الصلاحيات لكل صفحة موجودة في الموقع او اي عملية لحماية النظام.
 
-## Laravel Sponsors
+11- قمنا بأضافة اختبارات وحدات (Tests Unit) للتأكد من صحة عمليات النظام
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+## متطلبات التشغيل:
+1-ويب سيرفر مثلا xampp
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+2- نسخة php 8.2 او اعلى
 
-## Contributing
+3- تحميلComposer
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4-تحميل node package management
 
-## Code of Conduct
+#
+## المكتبات المستخدمة:
+1-مكتبة filament لتسهيل انشاء التصميم للوحة التحكم والاذونات ...   
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+يمكنك زيارة الموقع من هنا (https://filamentphp.com/docs)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2-استخدام مكتبة Jetstream من اجل عمليات انشاءحساب و تسجيل الدخول و التحقق من Email 
 
-## License
+يمكنك زيارة الموقع من هنا (https://jetstream.laravel.com) 
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+3-مكتبة filament-shield للتحكم بالصلاحيات وتخصيصها وحماية النظام
+https://github.com/bezhanSalleh/filament-shield
+
+
+
+## طريقة التشغيل:
+### 1. نسخ المستودع 
+ابحث عن مكان على جهاز الكمبيوتر الخاص بك حيث تريد تخزين المشروع
+
+قم بتشغيل وحدة التحكم bash هناك واستنسخ المشروع.
+
+`git clone https://github.com/DeveloperAbod/programming_education_platform.git`
+
+### 2. انتقل الى مسار المشروع
+يجب أن تكون داخل مسار المشروع الذي تم إنشاؤه للتو، لذا انتقل إليه.
+
+`cd project_name`
+
+### 3.  تنزيل composer dependencies و NPM dependencies و NPM Build
+عندما تقوم باستنساخ مشروع Laravel جديد، يجب عليك الآن تثبيت جميع الحزم المشروع. وهذا ما يؤدي في الواقع إلى تثبيت Laravel نفسه، من بين الحزم الضرورية الأخرى للبدء.
+
+
+
+`composer install`
+
+
+`npm install`
+
+`npm run build`
+
+### 4. قم بإنشاء ملف .env
+
+يجب عليك عمل نسخة من ملف .env.example وتسميته .env حتى تتمكن من إعداد الاعدادات الخاص بك, يمكنك النسخ بإستخدام هذا الامر
+
+`cp .env.example .env`
+
+### 5. إنشاء مفتاح تشفير التطبيق app key 
+
+
+يتطلب Laravel منك أن يكون لديك مفتاح تشفير للتطبيق يتم إنشاؤه عشوائيًا وتخزينه في ملف .env الخاص بك. سيستخدم التطبيق مفتاح التشفير هذا لتشفير عناصر مختلفة من تطبيقك من ملفات تعريف الارتباط إلى تجزئات كلمات المرور والمزيد.
+يمكنك انشاء مفتاح باستخدام هذا الامر
+
+`php artisan key:generate`
+
+
+
+### 8. قم بانشاء Migrate للجداول 
+بمجرد إضافة بيانات الاعتماد الخاصة بك إلى ملف .env، يمكنك الآن تنفيذ عمليات ترحيل قاعدة البيانات. ستؤدي هذه الخطوة إلى إنشاء جميع الجداول اللازمة في قاعدة بياناتك.
+
+`php artisan migrate`
+
+### 9. قم بانشاء seeder للسجلات (اضافة البيانات الاساسية لقاعدة البيانات) 
+`php artisan db:seed --class=PermissionTableSeeder`
+
+
+`php artisan db:seed --class=CreateAdminUserSeeder`
+
+
+### 10. تهيئة الصلاحيات وجلبها الى قاعدة البيانات
+
+
+`shield:install --fresh`
+
+
+### 11. التاكد من ربط ال stoarge ب public files
+
+
+`php artisan storage:link`
+
+
+### 12. قم بتشغيل السيرفر محليا
+`php artisan serve`
+
+
+### 13. قم بالدخول الى لوحة التحكم من الرابط التالي 
+
+`http://127.0.0.1:8000/admin`
+
+الحساب الاساسي (مدير النظام) `admin@admin.com`  كلمة المرور `12345678`
+
+
+
+##  اختبارات وحدات (Tests Unit)
+لتجربة الاختبارات اولا يجب عليك تفعيل اداة gd التي تسمح بإنشاء الصور ومعالجتها في PHP 
+
+انا استخدمتها لاختبار رفع الصور 
+
+
+طريقة تفعيلها في xampp 
+
+
+#### 1-اولا ادخل الى ملف php.ini الموجود داخل xampp غالبا في هذا المسار
+
+`C:\xampp\php\php.ini`
+
+#### 2-ثانيا ابحث بإستخدام `Ctrl + F` واكتب `extension=gd`
+
+سوف تكون هكذا `extension=gd;`  قم بتحويلها الى `extension=gd` اي فقط احذف  `;`
+
+#### 3- قم بحفظ الملف واعادة تشغيل للسيرفر  xampp
+
+
+#### 4- قم بالاختبار عن طريق هذا الامر
+
+`vendor/bin/pest`
+
+
+## طريقة استخدام النظام
+
+
+
+## صورة للمشروع
+
+![screencapture-127-0-0-1-8000-admin-2024-08-12-22_31_12](https://github.com/user-attachments/assets/c5b508f7-54d6-413e-97a9-836df5e37413)
+
